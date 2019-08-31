@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自动切换</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      border: 1px solid #000;
+      margin: 100px auto;
+    }
+
+    .nav {
+      height: 40px;
+      border-bottom: 1px solid #000;
+    }
+
+    .nav li {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      border-right: 1px solid #000;
+    }
+
+    .nav li.current {
+      background-color: pink;
+    }
+
+    .content .item {
+      height: 359px;
+      line-height: 200px;
+      text-align: center;
+      font-size: 50px;
+      display: none;
+    }
+
+    .content .show {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" id="box">
+    <div class="nav">
+      <ul>
+        <li class="nav-item current">影音</li>
+        <li class="nav-item">书籍</li>
+        <li class="nav-item">零食</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="item show">影音对应的内容</div>
+      <div class="item">书籍对应的内容</div>
+      <div class="item">零食对应的内容</div>
+    </div>
+  </div>
+</body>
+<script src="./tab.js"></script>
+<script src="./autoTab.js"></script>
+<script>
+//   let autoPlay = new AutoTab('#box', { time: 2000 })
+//   autoPlay.autoTabPlay()
+//   // 鼠标移入停下来
+//   autoPlay.stopAutoTabPlay()
+// // 鼠标移除继续轮播
+
+
+
+
+
+</script>
+
+
+</html>
