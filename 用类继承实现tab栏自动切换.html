@@ -73,16 +73,18 @@
 <script src="./tab.js"></script>
 <script src="./autoTab.js"></script>
 <script>
-//   let autoPlay = new AutoTab('#box', { time: 2000 })
-//   autoPlay.autoTabPlay()
-//   // 鼠标移入停下来
-//   autoPlay.stopAutoTabPlay()
-// // 鼠标移除继续轮播
+  //   let autoPlay = new AutoTab('#box', { time: 2000 })
+  //   autoPlay.autoTabPlay()
+  //   // 鼠标移入停下来
+  //   autoPlay.stopAutoTabPlay()
+  // // 鼠标移除继续轮播
 
+  let autoPlay = new Tab('.nav-item', 'mouseover', 'current')
+  console.log(autoPlay)
 
+  autoPlay.addEvent()
 
-
-
+  // document.querySelector('#box').addEventListener
 </script>
 
 
