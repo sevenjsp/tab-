@@ -9,23 +9,28 @@ class Tab {
   currentClass 分类样式
   contentClass 是内容分类
    */
-  constructor(navClass, event, currentClass, contentClass, show) {
-    this.navClass = navClass;
+  constructor(selector, opt) {
+
+    this.opt = opt || {}
+
+    this.navClass = this.opt.navClass || '.nav-item';
 
     // 事件类型
-    this.event = event;
+    this.event = this.opt.event || 'mouseover';
 
     // 分类的current的样式
-    this.currentClass = currentClass;
+    this.currentClass = this.opt.currentClass || 'current';
 
     // 内容分分类
-    this.contentClass = contentClass;
-    this.show = show;
+    this.contentClass = this.opt.contentClass || '.item';
+    this.show = this.opt.show || 'show';
 
 
-    this.navItems = document.querySelectorAll(this.navClass);
+    this.container = document.querySelector(selector)
 
-    this.contents = document.querySelectorAll(this.contentClass);
+    this.navItems = this.container.querySelectorAll(this.navClass);
+
+    this.contents = this.container.querySelectorAll(this.contentClass);
   }
 
   addEvent() {
