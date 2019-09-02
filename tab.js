@@ -31,6 +31,8 @@ class Tab {
     this.navItems = this.container.querySelectorAll(this.navClass);
 
     this.contents = this.container.querySelectorAll(this.contentClass);
+
+    this.addEvent()
   }
 
   addEvent() {
